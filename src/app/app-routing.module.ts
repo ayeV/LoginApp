@@ -5,9 +5,8 @@ import { ErrorComponent } from './error/error.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: 'login',
+    path: '',
     component: LoginComponent
   },
   {
