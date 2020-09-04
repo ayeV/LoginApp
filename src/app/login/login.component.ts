@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../user';
 import { RouterLink, Router } from '@angular/router';
+import { AuthenticationService } from '../servicios/authentication-service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,10 @@ import { RouterLink, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   public user: User;
-  constructor(public router : Router) {
+  constructor(
+    public router : Router,     
+    public authService : AuthenticationService
+    ) {
     this.user = new User();
    }
 
@@ -20,12 +25,14 @@ export class LoginComponent implements OnInit {
   {
     if(this.user.name != null && this.user.password != null)
     {
-      this.router.navigate(['bienvenido']);
+      this.authService.SignIn(this.user.name,this.user.password).then((res) => {
+        this.router.navigate(['bienvenido']);
+      }).catch((ex) => {
+        console.log('aaaa');
+        this.router.navigate(['error'])     
+ });
     }
-    else
-    {
-      this.router.navigate(['error']);
-    }
+   
 
   }
 }
