@@ -28,11 +28,10 @@ export class LoginComponent implements OnInit {
       this.authService.SignIn(this.user.name,this.user.password).then((res) => {
         this.router.navigate(['bienvenido']);
       }).catch((ex) => {
-        console.log('aaaa');
         this.router.navigate(['error'])     
  });
     }
-   
+    
 
   }
 }
