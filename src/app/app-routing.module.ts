@@ -6,6 +6,7 @@ import { BienvenidoComponent } from './components/bienvenido/bienvenido.componen
 import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
     component: BienvenidoComponent
   },
   {path: 'listadoEntidad' , component: ControlEntidadComponent},
-  {path: 'controlEntidad' , component: ControlEntidadComponent}
+  {path: 'detalleEntidad' , component: DetalleEntidadComponent}
 
 
   
