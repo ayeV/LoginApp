@@ -11,7 +11,8 @@ import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-en
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    redirectTo: '/bienvenido',
+    pathMatch: 'full'
   },
   {
     path: 'error',
