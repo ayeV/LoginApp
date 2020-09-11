@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import {FormsModule, NgModel} from  '@angular/forms';
@@ -12,6 +11,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
+import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
+import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
+import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
 
 
 
@@ -20,7 +23,11 @@ import { environment } from '../environments/environment';
     AppComponent,
     BienvenidoComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    ControlEntidadComponent,
+    ListadoEntidadComponent,
+    BienvenidoComponent,
+    DetalleEntidadComponent
   ],
   imports: [
     BrowserModule,
