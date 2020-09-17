@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import {HttpServiceService} from '../../servicios/http-service.service';
 
 
@@ -10,27 +11,33 @@ import {HttpServiceService} from '../../servicios/http-service.service';
 
 
 export class ControlEntidadComponent implements OnInit {
+  subscription: Subscription;
   public datos;
   public entidad;
+  public datosBorrados;
   constructor(private service: HttpServiceService) {
-
-     this.service.getData().subscribe(
-      x => {
-        this.datos = x;
-        console.log(this.datos);
-      }
-
-    );
 
    }
 
   ngOnInit(): void {
+    this.subscription = this.service.getNotification().subscribe(data => {
+      if(data)
+        this.datos = this.service.getData();
+        this.datosBorrados = this.service.getEliminados();
+    });
+
+
   }
 
   tomarEntidadDetalle(entidad)
   {
     this.entidad = entidad;
     
+  }
+
+  eliminarEntidad(entidad)
+  {
+    this.datos.pop();
   }
 
 

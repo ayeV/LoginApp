@@ -15,6 +15,7 @@ import { ControlEntidadComponent } from './components/control-entidad/control-en
 import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
 import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
 import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
+import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.component';
 
 
 
@@ -27,7 +28,8 @@ import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-en
     ControlEntidadComponent,
     ListadoEntidadComponent,
     BienvenidoComponent,
-    DetalleEntidadComponent
+    DetalleEntidadComponent,
+    BotonEntidadComponent
   ],
   imports: [
     BrowserModule,
