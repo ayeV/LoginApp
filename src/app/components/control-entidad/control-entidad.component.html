@@ -1,5 +1,12 @@
 <app-listado-entidad  [data] = "datos" (entidadSeleccionada) = "tomarEntidadDetalle($event)"></app-listado-entidad>
 
-<app-detalle-entidad  [unaEntidad] = "entidad" ></app-detalle-entidad>
+<div class="container"> 
+    <div class="row" >
+
+        <app-detalle-entidad  [unaEntidad] = "entidad" ></app-detalle-entidad>
+
+    </div>
+
+</div>
 
 <app-listado-entidad  [data] = "datosBorrados" (entidadSeleccionada) = "tomarEntidadDetalle($event)"></app-listado-entidad>
