@@ -7,25 +7,34 @@ import { Subject } from 'rxjs';
 })
 export class HttpServiceService {
 
-  private subject =new Subject<any>();
+  private subject = new Subject<any>();
   public lista = [];
   public listaEliminados = [];
   constructor(private http: HttpClient) {
-    
+
     this.http
-    .get("https://api.mocki.io/v1/570c5e5c").subscribe((x: any) =>{
-      this.lista = x;
-      this.sendNotification(true);
-    })
-   }
+      .get("https://restcountries.eu/rest/v2/region/europe").subscribe((x: any) => {
+        this.lista = x;
+        this.sendNotification(true);
+      })
+  }
 
-   sendNotification(value: any){
-     this.subject.next({text: value});
-   }
 
-   getNotification(){
-     return this.subject.asObservable();
-   }
+  getPaises(region) {
+    this.http
+      .get("https://restcountries.eu/rest/v2/region/" + region).subscribe((x: any) => {
+        this.lista = x;
+        this.sendNotification(true);
+      });
+  }
+
+  sendNotification(value: any) {
+    this.subject.next({ text: value });
+  }
+
+  getNotification() {
+    return this.subject.asObservable();
+  }
 
 
 
@@ -33,20 +42,19 @@ export class HttpServiceService {
     return this.lista;
   }
 
-  public getEliminados()
-  {
+  public getEliminados() {
     return this.listaEliminados;
   }
 
-  public delete(id){
+  public delete(id) {
     let elemento;
-    this.lista = this.lista.filter(x=>{
-      if(x.id == id){
+    this.lista = this.lista.filter(x => {
+      if (x.id == id) {
         elemento = x;
       }
       return x.id != id;
     });
-    if(elemento){
+    if (elemento) {
       this.listaEliminados.push(elemento);
     }
     this.sendNotification(true);

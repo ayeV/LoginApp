@@ -7,6 +7,7 @@ import { ControlEntidadComponent } from './components/control-entidad/control-en
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
+import { AlbumComponent } from './components/album/album.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'bienvenido',
     component: BienvenidoComponent
+  },
+  {
+    path: 'album',
+    component: AlbumComponent
   },
   {path: 'listadoEntidad' , component: ControlEntidadComponent},
   {path: 'detalleEntidad' , component: DetalleEntidadComponent}

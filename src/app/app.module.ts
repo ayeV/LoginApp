@@ -16,6 +16,10 @@ import { ListadoEntidadComponent } from './components/listado-entidad/listado-en
 import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
 import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
 import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.component';
+import { AlbumComponent } from './components/album/album.component';
+import { PaisesBanderaComponent } from './components/paises-bandera/paises-bandera.component';
+import { RegionesComponent } from './components/regiones/regiones.component';
+import { PrincipalComponent } from './components/principal/principal.component';
 
 
 
@@ -29,7 +33,11 @@ import { BotonEntidadComponent } from './components/boton-entidad/boton-entidad.
     ListadoEntidadComponent,
     BienvenidoComponent,
     DetalleEntidadComponent,
-    BotonEntidadComponent
+    BotonEntidadComponent,
+    AlbumComponent,
+    PaisesBanderaComponent,
+    RegionesComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
