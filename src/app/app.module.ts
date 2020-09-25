@@ -20,6 +20,7 @@ import { AlbumComponent } from './components/album/album.component';
 import { PaisesBanderaComponent } from './components/paises-bandera/paises-bandera.component';
 import { RegionesComponent } from './components/regiones/regiones.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { ListadoComponent } from './componentes/listado/listado.component';
 
 
 
@@ -37,7 +38,8 @@ import { PrincipalComponent } from './components/principal/principal.component';
     AlbumComponent,
     PaisesBanderaComponent,
     RegionesComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,

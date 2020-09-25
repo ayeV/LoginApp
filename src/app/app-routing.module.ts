@@ -12,7 +12,7 @@ import { AlbumComponent } from './components/album/album.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/bienvenido',
+    redirectTo: '/album',
     pathMatch: 'full'
   },
   {
