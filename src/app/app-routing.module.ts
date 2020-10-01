@@ -1,42 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { ErrorComponent } from './error/error.component';
-import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
-import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
-import { AlbumComponent } from './components/album/album.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 
 const routes: Routes = [
+  {
+    path: 'principal',
+    component: PrincipalComponent
+  },
   {
     path: '',
     redirectTo: '/principal',
     pathMatch: 'full'
   },
-  {
-    path: 'error',
-    component: ErrorComponent
-  },
-  {
-    path: 'bienvenido',
-    component: BienvenidoComponent
-  },
-  {
-    path: 'album',
-    component: AlbumComponent
-  },
-  {
-    path: 'principal',
-    component: PrincipalComponent
-  },
-  {path: 'listadoEntidad' , component: ControlEntidadComponent},
-  {path: 'detalleEntidad' , component: DetalleEntidadComponent}
+ 
+ 
 
-
-  
  
 ];
 
