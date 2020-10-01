@@ -1,0 +1,9 @@
+<div class="col-md-4" *ngIf="personaSeleccionadaMostrar">
+    <label> {{personaSeleccionadaMostrar.first_name}} </label><br>
+    <label> {{personaSeleccionadaMostrar.last_name}} </label>
+    <label> {{personaSeleccionadaMostrar.email}} </label>
+    <img [src]="personaSeleccionadaMostrar.photo" style="width: 30%;">
+    <button class="btn btn-primary btn-lg" (click)="limpiar(personaSeleccionadaMostrar)">
+      Limpiar
+    </button> 
+  </div>

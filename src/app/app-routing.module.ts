@@ -8,11 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
 import { AlbumComponent } from './components/album/album.component';
+import { PrincipalComponent } from './components/principal/principal.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/album',
+    redirectTo: '/principal',
     pathMatch: 'full'
   },
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'album',
     component: AlbumComponent
+  },
+  {
+    path: 'principal',
+    component: PrincipalComponent
   },
   {path: 'listadoEntidad' , component: ControlEntidadComponent},
   {path: 'detalleEntidad' , component: DetalleEntidadComponent}

@@ -21,6 +21,9 @@ import { PaisesBanderaComponent } from './components/paises-bandera/paises-bande
 import { RegionesComponent } from './components/regiones/regiones.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ListadoComponent } from './componentes/listado/listado.component';
+import { BorrarComponent } from './componentes/borrar/borrar.component';
+import { DetalleComponent } from './componentes/detalle/detalle.component';
+import { ModificacionComponent } from './componentes/modificacion/modificacion.component';
 
 
 
@@ -39,7 +42,10 @@ import { ListadoComponent } from './componentes/listado/listado.component';
     PaisesBanderaComponent,
     RegionesComponent,
     PrincipalComponent,
-    ListadoComponent
+    ListadoComponent,
+    BorrarComponent,
+    DetalleComponent,
+    ModificacionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,33 @@
-<p>listado works!</p>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Nombre</th>
+        <th>Apellido</th>     
+        <th>Foto</th>
+        <th>Accion</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entidad of personas1">
+        <td>{{entidad.id}}</td>
+        <td>{{entidad.email}}</td>
+        <td>{{entidad.first_name}}</td>
+        <td>{{entidad.last_name}}</td>
+        <td> <img [src]="entidad.photo" style="width: 30%;"></td>
+
+
+         <td><button type="button" class="btn btn-info btn-circle"  (click)="borrar(entidad)" ><i class="fa fa-check"></i>Borrar
+        </button></td> 
+        <td><button type="button" class="btn btn-info btn-circle"   (click)="mostrar(entidad)" ><i class="fa fa-check"></i>Detalle
+        </button></td> 
+        <td><button type="button" class="btn btn-info btn-circle"    (click)="modificar(entidad)"><i class="fa fa-check"></i>Modificar
+        </button></td> 
+      </tr>
+     
+    </tbody>
+  </table>

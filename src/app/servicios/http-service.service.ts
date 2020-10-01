@@ -11,12 +11,12 @@ export class HttpServiceService {
   public lista = [];
   public listaEliminados = [];
   constructor(private http: HttpClient) {
-
     this.http
-      .get("https://restcountries.eu/rest/v2/region/europe").subscribe((x: any) => {
-        this.lista = x;
-        this.sendNotification(true);
-      })
+    .get("https://api.mocki.io/v1/2898eee4").subscribe((x: any) => {
+      this.lista = x;
+      this.sendNotification(true);
+    });
+   
   }
 
 
@@ -58,6 +58,17 @@ export class HttpServiceService {
       this.listaEliminados.push(elemento);
     }
     this.sendNotification(true);
+  }
+
+
+  public getPersonas()
+  {
+    this.http
+    .get("https://api.mocki.io/v1/2898eee4").subscribe((x: any) => {
+      this.lista = x;
+      this.sendNotification(true);
+    });
+
   }
 
 
