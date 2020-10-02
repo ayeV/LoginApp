@@ -1,0 +1,11 @@
+
+    <ul class="list-group mb-3" *ngIf="actores">
+        <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let item of actores">
+            <div (click)="enviarActor(item)" style="cursor: pointer;">
+                <h6 class="my-0"><img [src]="item.foto"  style="width: 100px"></h6>
+                <small class="text-muted">{{item.nombre}}</small>
+            </div>
+        </li>
+
+    </ul>
+

@@ -1,0 +1,66 @@
+<body class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4" *ngIf="actores">
+
+            <app-tablaactor [actores]="actores"
+            (ActorSeleccionado) = "setearActor($event)"
+            >
+            </app-tablaactor>
+        </div>
+            <div class="col-md-8 order-md-1">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required [(ngModel)]="nombre">
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fechaEstreno">Fecha de estreno</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="fechaDeEstreno" required [(ngModel)]="fechaDeEstreno">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cantPublico">Cantidad de publico</label>
+                        <input type="number" class="form-control" id="cantPublico" [(ngModel)]="cantPublico" required>
+                    </div>
+
+                    <div class="mb-3" *ngIf="actorAgregado">
+                        <label >Actor</label>
+                        <input type="text" class="form-control" id="actor" [value]="actorAgregado.nombre">
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="tipo">Tipo</label>
+                            <select class="custom-select d-block w-100" id="tipo" required [(ngModel)]="tipo">
+                                <option value="comedia">Comedia</option>
+                                <option value="amor">Amor</option>
+                                <option value="otro">Otro</option>
+                                <option value="terror">Terror</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="guardar()">Guardar</button>
+                    <div class="spinner-border text-primary" role="status" *ngIf="estaGuardando">
+                        <span class="sr-only">Guardando...</span>
+                      </div>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a [routerLink]="['/busqueda']"  >Ir a Componente busqueda</a></li>
+              
+            </ul>
+        </footer>
+    </div>
+</body>

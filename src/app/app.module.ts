@@ -15,6 +15,15 @@ import { ListadoComponent } from './componentes/listado/listado.component';
 import { BorrarComponent } from './componentes/borrar/borrar.component';
 import { DetalleComponent } from './componentes/detalle/detalle.component';
 import { ModificacionComponent } from './componentes/modificacion/modificacion.component';
+import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
+import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
+import { PeliculaAltaComponent } from './componentes/pelicula-alta/pelicula-alta.component';
+import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.component';
+import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component';
+import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
+import { TablaPeliculaComponent } from './componentes/tabla-pelicula/tabla-pelicula.component';
+import { DetallepeliculaComponent } from './componentes/detallepelicula/detallepelicula.component';
+import { TablaactorComponent } from './componentes/tablaactor/tablaactor.component';
 
 
 
@@ -25,7 +34,16 @@ import { ModificacionComponent } from './componentes/modificacion/modificacion.c
     ListadoComponent,
     BorrarComponent,
     DetalleComponent,
-    ModificacionComponent
+    ModificacionComponent,
+    BienvenidoComponent,
+    BusquedaComponent,
+    PeliculaAltaComponent,
+    ActorAltaComponent,
+    ActorListadoComponent,
+    PeliculaListadoComponent,
+    TablaPeliculaComponent,
+    DetallepeliculaComponent,
+    TablaactorComponent
   ],
   imports: [
     BrowserModule,

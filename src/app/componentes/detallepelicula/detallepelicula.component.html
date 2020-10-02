@@ -1,0 +1,12 @@
+<div class="col-md-4" *ngIf="peliculaSeleccionadaMostrar">
+    <p> {{peliculaSeleccionadaMostrar.nombre}} </p>
+    <p> {{peliculaSeleccionadaMostrar.fechaDeEstreno}} </p>
+    <p> {{peliculaSeleccionadaMostrar.tipo}} </p>
+    <p> {{peliculaSeleccionadaMostrar.cantPublico}} </p>
+    <img [src]="peliculaSeleccionadaMostrar.fotoPelicula" style="width: 30%;">
+    <p>
+        <button class="btn btn-primary btn-lg" (click)="limpiar(peliculaSeleccionadaMostrar)">
+            Limpiar
+        </button>
+    </p>
+</div>
