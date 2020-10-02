@@ -9,21 +9,22 @@ import { PeliculaAltaComponent } from './componentes/pelicula-alta/pelicula-alta
 import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component';
 import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
+import { ListadoComponent } from './componentes/listado/listado.component';
 
 const routes: Routes = [
+  {
+    path: 'busqueda',
+    component: BusquedaComponent
+  },
+  {
+    path: '',
+    redirectTo: '/busqueda',
+    pathMatch: 'full'
+  },
   {
     path: 'bienvenido',
     component: BienvenidoComponent
   },
-  {
-    path: '',
-    redirectTo: '/bienvenido',
-    pathMatch: 'full'
-  },
- {
-   path: 'busqueda',
-   component: BusquedaComponent
- },
  {
   path: 'peliculas/alta',
   component: PeliculaAltaComponent

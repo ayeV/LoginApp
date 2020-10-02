@@ -45,14 +45,18 @@ export class PeliculaAltaComponent implements OnInit {
 
   guardar()
   {
-    this.estaGuardando = true;
-    this.db.postPelicula(
-      new Pelicula(this.ID(),this.nombre,this.tipo,this.fechaDeEstreno,this.cantPublico,'')
-      ,new Actor(this.ID(),this.actorAgregado.nombre,this.actorAgregado.apellido,
-    this.actorAgregado.fechaNac,this.actorAgregado.foto,this.actorAgregado.sexo)).then(() =>
+    if(this.nombre != null && this.actorAgregado != null && this.cantPublico != null && this.fechaDeEstreno != null && this.tipo != null)
     {
-      this.estaGuardando = false;
-    }   );
+      this.estaGuardando = true;
+      this.db.postPelicula(
+        new Pelicula(this.ID(),this.nombre,this.tipo,this.fechaDeEstreno,this.cantPublico,'')
+        ,new Actor(this.ID(),this.actorAgregado.nombre,this.actorAgregado.apellido,
+      this.actorAgregado.fechaNac,this.actorAgregado.foto,this.actorAgregado.sexo)).then(() =>
+      {
+        this.estaGuardando = false;
+      }   );
+    }
+ 
   }
 
    ID() {
