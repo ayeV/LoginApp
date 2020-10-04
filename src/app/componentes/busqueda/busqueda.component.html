@@ -8,6 +8,10 @@
           <a class="nav-link" [routerLink]="['/peliculas/alta']">Alta pelicula <span
               class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/peliculas/listado']">Peliculas listado <span
+              class="sr-only">(current)</span></a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -19,23 +23,23 @@
   <main role="main">
 
     <div class="jumbotron">
-      <div class="container">
-        <app-tabla-pelicula [peliculas1]="peliculas" (peliculaSeleccionadaMostrar)="enviarADetalle($event)">
-        </app-tabla-pelicula>
-
-      </div>
-    </div>
-
-    <div class="container">
-
       <div class="row">
-        <app-detallepelicula [peliculaSeleccionadaMostrar]="peliculaDetalle" (Limpiar)="limpiar($event)">
-        </app-detallepelicula>
+        <div class="col">
+          <app-tabla-pelicula [peliculas1]="peliculas" (peliculaSeleccionadaMostrar)="enviarADetalle($event)">
+          </app-tabla-pelicula>
+
+        </div>
+
+        <div class="col">
+          <app-detallepelicula [peliculaSeleccionadaMostrar]="peliculaDetalle" (Limpiar)="limpiar($event)">
+          </app-detallepelicula>
+        </div>
+
       </div>
 
-      <hr>
-
     </div>
+
+
 
   </main>
 

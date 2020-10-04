@@ -6,18 +6,23 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./detallepelicula.component.css']
 })
 export class DetallepeliculaComponent implements OnInit {
-  
+
   @Input() peliculaSeleccionadaMostrar;
-  @Output() Limpiar : EventEmitter<any>= new EventEmitter<any>(); 
+  @Input() borrado;
+  @Output() Limpiar: EventEmitter<any> = new EventEmitter<any>();
+  @Output() BorrarPelicula: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
-  limpiar(entidad)
-  {
-     this.Limpiar.emit(entidad);
+
+  limpiar(entidad) {
+    this.Limpiar.emit(entidad);
+  }
+
+  borrar(entidad) {
+    this.BorrarPelicula.emit(entidad);
   }
 }

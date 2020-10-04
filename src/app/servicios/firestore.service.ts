@@ -99,6 +99,11 @@ export class FirestoreService {
   }
 
 
+  borrarPelicula(id)
+  {
+    return this.db.collection('peliculas').doc(id).delete();
+  }
+
 }
 
 
