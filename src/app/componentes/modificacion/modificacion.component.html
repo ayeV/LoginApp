@@ -1,8 +1,0 @@
-<div class="col-md-4" *ngIf="personaSeleccionadaModificacion">
-    <input [value]="personaSeleccionadaModificacion.first_name" [(ngModel)]="first_name">  
-    <input [value]="personaSeleccionadaModificacion.last_name" [(ngModel)]="last_name">
-    <input [value]="personaSeleccionadaModificacion.email" [(ngModel)]="email">
-    <button class="btn btn-primary btn-lg" (click)="modificar()" >
-      Modificar
-    </button> 
-  </div>
