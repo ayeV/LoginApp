@@ -29,6 +29,7 @@ export class BusquedaComponent implements OnInit {
           new Pelicula(item.id,item.data().nombre,item.data().tipo,item.data().fechaDeEstreno,item.data().cantPublico,item.data().fotoPelicula)
         );
       });
+      console.log(pics);
       this.peliculas = pics;
     
     });

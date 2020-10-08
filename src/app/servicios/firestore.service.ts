@@ -85,6 +85,25 @@ export class FirestoreService {
   }
 
 
+  postActor(actor:Actor) {
+    return this.db.collection('actores').add({
+     nombre:actor.nombre,
+     apellido:actor.apellido,
+     fechaNac:actor.fechaNac,
+     foto:'',
+     sexo:actor.sexo,
+     pais: actor.pais
+    })
+      .then(() => {
+        console.log("Document successfully written!");
+      })
+      .catch(function (error) {
+        console.error("Error writing document: ", error);
+      });
+  }
+
+
+
 
   getPeliculas() {
     return this.db.collection('peliculas').get();

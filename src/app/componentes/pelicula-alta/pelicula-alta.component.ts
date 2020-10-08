@@ -30,7 +30,7 @@ export class PeliculaAltaComponent implements OnInit {
     this.db.getActores().subscribe(x => {
       x.forEach(item => {
         pics.push(
-          new Actor(item.id,item.data().nombre,item.data().apellido,item.data().fechaNac,item.data().foto,item.data().sexo)
+          new Actor(item.id,item.data().nombre,item.data().apellido,item.data().fechaNac,item.data().foto,item.data().sexo,null)
         );
       });
       this.actores = pics;
@@ -51,7 +51,7 @@ export class PeliculaAltaComponent implements OnInit {
       this.db.postPelicula(
         new Pelicula(this.ID(),this.nombre,this.tipo,this.fechaDeEstreno,this.cantPublico,'')
         ,new Actor(this.ID(),this.actorAgregado.nombre,this.actorAgregado.apellido,
-      this.actorAgregado.fechaNac,this.actorAgregado.foto,this.actorAgregado.sexo)).then(() =>
+      this.actorAgregado.fechaNac,this.actorAgregado.foto,this.actorAgregado.sexo,null)).then(() =>
       {
         this.estaGuardando = false;
       }   );

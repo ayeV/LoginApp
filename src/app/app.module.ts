@@ -19,6 +19,7 @@ import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicul
 import { TablaPeliculaComponent } from './componentes/tabla-pelicula/tabla-pelicula.component';
 import { DetallepeliculaComponent } from './componentes/detallepelicula/detallepelicula.component';
 import { TablaactorComponent } from './componentes/tablaactor/tablaactor.component';
+import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 
 
 
@@ -33,7 +34,8 @@ import { TablaactorComponent } from './componentes/tablaactor/tablaactor.compone
     PeliculaListadoComponent,
     TablaPeliculaComponent,
     DetallepeliculaComponent,
-    TablaactorComponent
+    TablaactorComponent,
+    TablaPaisesComponent
   ],
   imports: [
     BrowserModule,

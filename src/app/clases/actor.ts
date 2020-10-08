@@ -1,3 +1,4 @@
+import { isThisTypeNode } from 'typescript';
 
 export class Actor {
     public id:string;
@@ -6,8 +7,9 @@ export class Actor {
     public fechaNac:string;
     public foto:string
     public sexo:string;
-    
-    constructor(id,nombre,apellido,fechaNac,foto,sexo)
+    public pais:any;
+
+    constructor(id,nombre,apellido,fechaNac,foto,sexo, pais)
     {
         this.id = id;
         this.nombre = nombre;
@@ -15,6 +17,7 @@ export class Actor {
         this.fechaNac = fechaNac;
         this.foto = foto;
         this.sexo = sexo;
+        this.pais = pais;
     }
 
 }

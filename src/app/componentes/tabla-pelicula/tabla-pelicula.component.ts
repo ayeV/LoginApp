@@ -18,6 +18,7 @@ export class TablaPeliculaComponent implements OnInit {
   
   mostrar(entidad)
   {
+    console.log(entidad);
     this.peliculaSeleccionadaMostrar.emit(entidad);
   }
 

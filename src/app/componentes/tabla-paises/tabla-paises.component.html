@@ -1,0 +1,11 @@
+
+    <ul class="list-group mb-3" *ngIf="paises">
+        <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let item of paises">
+            <div (click)="enviarPais(item)" style="cursor: pointer;">
+                <h6 class="my-0"><img [src]="item.flag"  style="width: 100px"></h6>
+                <small class="text-muted">{{item.name}}</small>
+            </div>
+        </li>
+
+    </ul>
+
