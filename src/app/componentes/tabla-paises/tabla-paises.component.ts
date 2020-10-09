@@ -37,7 +37,7 @@ export class TablaPaisesComponent implements OnInit {
     this.service.getPaises2().subscribe((x): any => {
 
       this.paises = x;
-      this.paises = this.paises.slice(0,4);
+      this.paises = this.paises.slice(0,10);
     });
   }
 

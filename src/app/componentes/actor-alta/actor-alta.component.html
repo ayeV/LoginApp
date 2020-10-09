@@ -1,7 +1,7 @@
 <body class="bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 order-md-2 mb-4" *ngIf="paises">
+            <div class="col-md-4 order-md-2 mb-4" *ngIf="paises" >
 
             <app-tabla-paises
             (paisSeleccionado) = "setearPais($event)"
@@ -45,7 +45,7 @@
 
                     <div class="mb-3" *ngIf="paisAgregado">
                         <label >Pais</label>
-                        <input type="text" class="form-control" id="pais" [value]="paisAgregado.nombre">
+                        <input type="text" class="form-control" id="pais" [value]="paisAgregado.nombre" readonly>
                     </div>
 
 

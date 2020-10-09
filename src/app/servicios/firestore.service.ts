@@ -123,6 +123,27 @@ export class FirestoreService {
     return this.db.collection('peliculas').doc(id).delete();
   }
 
+  borrarActor(id)
+  {
+    return this.db.collection('actores').doc(id).delete();
+  }
+
+
+  
+  modificarActor(id,actor:any) {
+    return this.db.collection('actores').doc(id).set({
+      nombre:actor.nombre,
+      apellido:actor.apellido,
+      fechaNac:actor.fechaNac,
+      foto:actor.foto,
+      sexo:actor.sexo,
+      pais: {
+        nombre: actor.pais
+      }
+    },{merge: true});
+  }
+
+
 }
 
 

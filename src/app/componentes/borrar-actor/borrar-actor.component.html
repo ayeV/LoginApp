@@ -1,0 +1,14 @@
+<div class="col-md-4" *ngIf="actorSeleccionadoBorrar">
+    <p> {{actorSeleccionadoBorrar.nombre}} </p>
+    <p> {{actorSeleccionadoBorrar.apellido}} </p>
+    <p> {{actorSeleccionadoBorrar.fechaNac}} </p>
+    <p> {{actorSeleccionadoBorrar.sexo}} </p>
+    <p> {{actorSeleccionadoBorrar.pais.nombre}} </p>
+
+    <p>
+        <button class="btn btn-primary btn-lg" (click)="borrar(actorSeleccionadoBorrar)">
+            Borrar
+          </button> 
+    </p>
+   
+</div>

@@ -1,1 +1,56 @@
-<p>actor-listado works!</p>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/peliculas/alta']">Alta pelicula <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/peliculas/listado']">Peliculas listado <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/busqueda']">Busqueda <span
+              class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <main role="main">
+
+    <div class="jumbotron">
+      <div class="container">
+        <app-tablaactores [actores1]="actores" 
+          (actorSeleccionadoMostrar)="enviarADetalle($event)"
+          (actorSeleccionadoBorrar)="enviarABorrar($event)" 
+          (actorSeleccionadoModificar)="enviarAModificar($event)">
+        </app-tablaactores>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <app-borrar-actor [actorSeleccionadoBorrar]="actorBorrar" (BorradoDeElemento)="borrar($event)"></app-borrar-actor>
+        <app-detalleactor [actorSeleccionadoMostrar]="actorDetalle" (Limpiar)="limpiar($event)"></app-detalleactor>
+        <app-modificar-actor [actorSeleccionadoModificar]="actorModificar" (Modificar)="modificar($event)"></app-modificar-actor>
+      </div>
+
+      <hr>
+
+    </div>
+
+  </main>
+
+  <footer class="container">
+    <p>&copy; Company 2017-2020</p>
+  </footer>

@@ -20,6 +20,10 @@ import { TablaPeliculaComponent } from './componentes/tabla-pelicula/tabla-pelic
 import { DetallepeliculaComponent } from './componentes/detallepelicula/detallepelicula.component';
 import { TablaactorComponent } from './componentes/tablaactor/tablaactor.component';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
+import { DetalleactorComponent } from './componentes/detalleactor/detalleactor.component';
+import { TablaactoresComponent } from './tablaactores/tablaactores.component';
+import { BorrarActorComponent } from './componentes/borrar-actor/borrar-actor.component';
+import { ModificarActorComponent } from './componentes/modificar-actor/modificar-actor.component';
 
 
 
@@ -35,7 +39,11 @@ import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.co
     TablaPeliculaComponent,
     DetallepeliculaComponent,
     TablaactorComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    DetalleactorComponent,
+    TablaactoresComponent,
+    BorrarActorComponent,
+    ModificarActorComponent
   ],
   imports: [
     BrowserModule,
