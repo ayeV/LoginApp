@@ -1,29 +1,30 @@
 <body>
-    <app-menu></app-menu>
+  <app-menu></app-menu>
 
-    <main role="main">
+  <main role="main">
 
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col">
-            <app-tabla-pelicula [peliculas1]="peliculas" (peliculaSeleccionadaMostrar)="enviarADetalle($event)" [verDetalle] = "true">
-            </app-tabla-pelicula>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col">
+          <app-tabla-pelicula [peliculas1]="peliculas" (peliculaSeleccionadaMostrar)="enviarADetalle($event)"
+            [verDetalle]="true">
+          </app-tabla-pelicula>
 
-          </div>
+        </div>
 
-          <div class="col">
-            <app-detallepelicula [peliculaSeleccionadaMostrar]="peliculaDetalle" (Limpiar)="limpiar($event)">
-            </app-detallepelicula>
-          </div>
-
+        <div class="col">
+          <app-detallepelicula [peliculaSeleccionadaMostrar]="peliculaDetalle" (Limpiar)="limpiar($event)">
+          </app-detallepelicula>
         </div>
 
       </div>
 
+    </div>
 
 
-    </main>
 
-    <footer class="container">
-      <p>&copy; Company 2017-2020</p>
-    </footer>
+  </main>
+
+  <footer class="container">
+    <p>&copy; Company 2017-2020</p>
+  </footer>

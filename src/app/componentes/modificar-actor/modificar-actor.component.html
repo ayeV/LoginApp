@@ -1,14 +1,14 @@
 <div class="col-md-4" *ngIf="actorSeleccionadoModificar">
-    <input [value]="actorSeleccionadoModificar.nombre" [(ngModel)]="nombre">  
-    <input [value]="actorSeleccionadoModificar.apellido" [(ngModel)]="apellido">
-    <input [value]="actorSeleccionadoModificar.pais.nombre" [(ngModel)]="pais">
+  <input [value]="actorSeleccionadoModificar.nombre" [(ngModel)]="nombre">
+  <input [value]="actorSeleccionadoModificar.apellido" [(ngModel)]="apellido">
+  <input [value]="actorSeleccionadoModificar.pais.nombre" [(ngModel)]="pais">
 
-    <input type="date" [value]="actorSeleccionadoModificar.fechaNac" [(ngModel)]="fechaNac">
+  <input type="date" [value]="actorSeleccionadoModificar.fechaNac" [(ngModel)]="fechaNac">
 
-    <p>
-        <button class="btn btn-primary btn-lg" (click)="modificar()" >
-            Modificar
-          </button> 
-    </p>
-   
-  </div>
+  <p>
+    <button class="btn btn-primary btn-lg" (click)="modificar()">
+      Modificar
+    </button>
+  </p>
+
+</div>

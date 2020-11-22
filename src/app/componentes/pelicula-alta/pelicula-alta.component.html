@@ -2,16 +2,14 @@
     <app-menu></app-menu>
     <main role="main">
 
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-4 order-md-2 mb-4" *ngIf="actores">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4" *ngIf="actores">
 
-            <app-tablaactor [actores]="actores"
-            (ActorSeleccionado) = "setearActor($event)"
-            >
-            </app-tablaactor>
-        </div>
-            <div class="col-md-8 order-md-1">
+                    <app-tablaactor [actores]="actores" (ActorSeleccionado)="setearActor($event)">
+                    </app-tablaactor>
+                </div>
+                <div class="col-md-8 order-md-1">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nombre">Nombre</label>
@@ -23,7 +21,8 @@
                     <div class="mb-3">
                         <label for="fechaEstreno">Fecha de estreno</label>
                         <div class="input-group">
-                            <input type="date" class="form-control" id="fechaDeEstreno" required [(ngModel)]="fechaDeEstreno">
+                            <input type="date" class="form-control" id="fechaDeEstreno" required
+                                [(ngModel)]="fechaDeEstreno">
                         </div>
                     </div>
 
@@ -33,7 +32,7 @@
                     </div>
 
                     <div class="mb-3" *ngIf="actorAgregado">
-                        <label >Actor</label>
+                        <label>Actor</label>
                         <input type="text" class="form-control" id="actor" [value]="actorAgregado.nombre">
                     </div>
 
@@ -55,18 +54,18 @@
                     <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="guardar()">Guardar</button>
                     <div class="spinner-border text-primary" role="status" *ngIf="estaGuardando">
                         <span class="sr-only">Guardando...</span>
-                      </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-     
-    </div>
-</main>
+
+        </div>
+    </main>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <ul class="list-inline">
-            <li class="list-inline-item"><a [routerLink]="['/busqueda']"  >Ir a Componente busqueda</a></li>
-          
+            <li class="list-inline-item"><a [routerLink]="['/busqueda']">Ir a Componente busqueda</a></li>
+
         </ul>
     </footer>
 </body>

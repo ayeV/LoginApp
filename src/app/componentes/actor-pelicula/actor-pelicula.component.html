@@ -1,8 +1,6 @@
 <body>
     <app-menu></app-menu>
-
     <main role="main">
-
         <div class="jumbotron">
             <div class="container">
                 <table class="table table-striped">
@@ -16,8 +14,6 @@
                             <th>Pais</th>
                             <th>Foto</th>
                             <th>Accion</th>
-
-
                         </tr>
                     </thead>
                     <tbody>
@@ -39,17 +35,13 @@
                             <td><button type="button" class="btn btn-info btn-circle" (click)="verDetalle(entidad)"><i
                                         class="fa fa-check"></i>Ver detalle
                                 </button></td>
-
-
                         </tr>
-
                     </tbody>
                 </table>
             </div>
         </div>
 
         <div class="container">
-
             <div class="row">
                 <div class="col" *ngIf="peliculasDelActor.length >0">
                     <app-tabla-pelicula [peliculas1]="peliculasDelActor" [verDetalle]="false">
@@ -64,7 +56,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer class="container">
