@@ -28,7 +28,7 @@ export class PeliculaListadoComponent implements OnInit {
     this.db.getPeliculas().subscribe(x => {
       x.forEach(item => {
         pics.push(
-          new Pelicula(item.id, item.data().nombre, item.data().tipo, item.data().fechaDeEstreno, item.data().cantPublico, item.data().fotoPelicula)
+          new Pelicula(item.id, item.data().nombre, item.data().tipo, item.data().fechaDeEstreno, item.data().cantPublico, item.data().fotoPelicula,item.data().actor)
         );
       });
       this.peliculas = pics;

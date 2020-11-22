@@ -1,14 +1,16 @@
 <body class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 order-md-2 mb-4" *ngIf="paises" >
+    <app-menu></app-menu>
 
-            <app-tabla-paises
-            (paisSeleccionado) = "setearPais($event)"
-            >
-            </app-tabla-paises>
-        </div>
-            <div class="col-md-8 order-md-1">
+    <main role="main">
+
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4" *ngIf="paises">
+
+                    <app-tabla-paises (paisSeleccionado)="setearPais($event)">
+                    </app-tabla-paises>
+                </div>
+                <div class="col-md-8 order-md-1">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nombre">Nombre</label>
@@ -32,7 +34,7 @@
                         </div>
                     </div>
 
-                  
+
                     <div class="row">
                         <div class="col-md-5 mb-3">
                             <label for="sexo">Sexo</label>
@@ -44,7 +46,7 @@
                     </div>
 
                     <div class="mb-3" *ngIf="paisAgregado">
-                        <label >Pais</label>
+                        <label>Pais</label>
                         <input type="text" class="form-control" id="pais" [value]="paisAgregado.nombre" readonly>
                     </div>
 
@@ -53,15 +55,17 @@
                     <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="guardar()">Guardar</button>
                     <div class="spinner-border text-primary" role="status" *ngIf="estaGuardando">
                         <span class="sr-only">Guardando...</span>
-                      </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <ul class="list-inline">
-                <li class="list-inline-item"><a [routerLink]="['/busqueda']"  >Ir a Componente busqueda</a></li>
-              
-            </ul>
-        </footer>
-    </div>
+        </div>
+    </main>
+
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a [routerLink]="['/busqueda']">Volver</a></li>
+        </ul>
+    </footer>
 </body>

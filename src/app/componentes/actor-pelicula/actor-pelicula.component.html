@@ -1,0 +1,72 @@
+<body>
+    <app-menu></app-menu>
+
+    <main role="main">
+
+        <div class="jumbotron">
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Fecha de nac</th>
+                            <th>Sexo</th>
+                            <th>Pais</th>
+                            <th>Foto</th>
+                            <th>Accion</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let entidad of actores">
+                            <td>{{entidad.id}}</td>
+                            <td>{{entidad.nombre}}</td>
+                            <td>{{entidad.apellido}}</td>
+                            <td>{{entidad.fechaNac}}</td>
+                            <td>{{entidad.sexo}}</td>
+                            <td>{{entidad.pais.nombre}}</td>
+                            <td> <img [src]="entidad.foto" style="width: 30%;"></td>
+
+                            <td><button type="button" class="btn btn-info btn-circle" (click)="verPeliculas(entidad)"><i
+                                        class="fa fa-check"></i>Ver peliculas
+                                </button></td>
+                            <td><button type="button" class="btn btn-info btn-circle" (click)="verPais(entidad)"><i
+                                        class="fa fa-check"></i>Ver pais
+                                </button></td>
+                            <td><button type="button" class="btn btn-info btn-circle" (click)="verDetalle(entidad)"><i
+                                        class="fa fa-check"></i>Ver detalle
+                                </button></td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col" *ngIf="peliculasDelActor.length >0">
+                    <app-tabla-pelicula [peliculas1]="peliculasDelActor" [verDetalle]="false">
+                    </app-tabla-pelicula>
+                </div>
+                <div class="col">
+                    <app-detalle-pais [pais]="pais"></app-detalle-pais>
+                </div>
+                <div class="col">
+                    <app-detalleactor [actorSeleccionadoMostrar]="actorDetalle" (Limpiar)="limpiar($event)">
+                    </app-detalleactor>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="container">
+        <p>&copy; Company 2017-2020</p>
+    </footer>

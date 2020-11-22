@@ -8,6 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TablaPeliculaComponent implements OnInit {
 
   @Input() peliculas1;
+  @Input() verDetalle;
+
   @Output() peliculaSeleccionadaMostrar: EventEmitter<any>= new EventEmitter<any>(); 
 
   constructor() { }

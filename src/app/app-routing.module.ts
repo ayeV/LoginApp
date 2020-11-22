@@ -8,6 +8,7 @@ import { PeliculaAltaComponent } from './componentes/pelicula-alta/pelicula-alta
 import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component';
 import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
+import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
 {
   path: 'peliculas/listado',
   component: PeliculaListadoComponent
+},
+{
+  path: 'actor/actorpelicula',
+  component: ActorPeliculaComponent
 }
  
 ];

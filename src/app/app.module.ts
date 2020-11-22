@@ -24,6 +24,9 @@ import { DetalleactorComponent } from './componentes/detalleactor/detalleactor.c
 import { TablaactoresComponent } from './tablaactores/tablaactores.component';
 import { BorrarActorComponent } from './componentes/borrar-actor/borrar-actor.component';
 import { ModificarActorComponent } from './componentes/modificar-actor/modificar-actor.component';
+import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
+import { MenuComponent } from './componentes/menu/menu.component';
 
 
 
@@ -43,7 +46,10 @@ import { ModificarActorComponent } from './componentes/modificar-actor/modificar
     DetalleactorComponent,
     TablaactoresComponent,
     BorrarActorComponent,
-    ModificarActorComponent
+    ModificarActorComponent,
+    ActorPeliculaComponent,
+    DetallePaisComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

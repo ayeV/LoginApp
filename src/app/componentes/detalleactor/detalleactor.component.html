@@ -1,9 +1,9 @@
-<div class="col-md-4" *ngIf="actorSeleccionadoMostrar">
-    <p> {{actorSeleccionadoMostrar.nombre}} </p>
-    <p> {{actorSeleccionadoMostrar.apellido}} </p>
-    <p> {{actorSeleccionadoMostrar.fechaNac}} </p>
-    <p> {{actorSeleccionadoMostrar.sexo}} </p>
-    <p> {{actorSeleccionadoMostrar.pais.nombre}} </p>
+<div  *ngIf="actorSeleccionadoMostrar" style="border-color: black;border-width: 2px;">
+    <p>Nombre: {{actorSeleccionadoMostrar.nombre}} </p>
+    <p>Apellido: {{actorSeleccionadoMostrar.apellido}} </p>
+    <p>Fecha nac: {{actorSeleccionadoMostrar.fechaNac}} </p>
+    <p>Sexo: {{actorSeleccionadoMostrar.sexo}} </p>
+    <p>Pais: {{actorSeleccionadoMostrar.pais.nombre}} </p>
 
     <p>
         <button class="btn btn-primary btn-lg" (click)="limpiar(actorSeleccionadoMostrar)">

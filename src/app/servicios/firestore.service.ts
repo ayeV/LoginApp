@@ -73,7 +73,8 @@ export class FirestoreService {
         fechaNac:actor.fechaNac,
         sexo:actor.sexo,
         foto:actor.foto,
-        id:actor.id
+        id:actor.id,
+        pais:actor.pais
       }
     })
       .then(() => {

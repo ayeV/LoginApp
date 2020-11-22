@@ -8,7 +8,7 @@
         <th>Fecha de estreno</th>     
         <th>Cant. de publico</th>
         <th>Foto</th>
-        <th>Accion</th>
+        <th [hidden]="!verDetalle">Accion</th>
 
         
       </tr>
@@ -21,7 +21,7 @@
         <td>{{entidad.fechaDeEstreno}}</td>
         <td>{{entidad.cantPublico}}</td>
         <td> <img [src]="entidad.fotoPelicula" style="width: 30%;"></td>
-        <td><button type="button" class="btn btn-info btn-circle"   (click)="mostrar(entidad)" ><i class="fa fa-check"></i>Detalle
+        <td [hidden]="!verDetalle"><button type="button" class="btn btn-info btn-circle"   (click)="mostrar(entidad)" ><i class="fa fa-check"></i>Detalle
         </button></td> 
 
        

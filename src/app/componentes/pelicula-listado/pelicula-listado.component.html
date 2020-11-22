@@ -1,49 +1,31 @@
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  
-  
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/peliculas/alta']">Alta pelicula <span
-                class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="['/peliculas/listado']">Peliculas listado <span
-                class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  
-    <main role="main">
-  
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col">
+  <app-menu></app-menu>
 
-          <app-tabla-pelicula [peliculas1]="peliculas" (peliculaSeleccionadaMostrar)="enviarADetalle($event)">
+  <main role="main">
+
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col">
+          <app-tabla-pelicula [peliculas1]="peliculas" (peliculaSeleccionadaMostrar)="enviarADetalle($event)"
+            [verDetalle]="true">
           </app-tabla-pelicula>
-          </div>
-
-          <div class="col">
-            <app-detallepelicula [peliculaSeleccionadaMostrar]="peliculaDetalle" (Limpiar)="limpiar($event)" [borrado] = "borrado"  (BorrarPelicula) = "borrar($event)">
-            </app-detallepelicula>
-          </div>
-    
         </div>
+
+        <div class="col">
+          <app-detallepelicula [peliculaSeleccionadaMostrar]="peliculaDetalle" (Limpiar)="limpiar($event)"
+            [borrado]="borrado" (BorrarPelicula)="borrar($event)">
+          </app-detallepelicula>
+        </div>
+
       </div>
-  
-      <div class="spinner-border text-primary" role="status" *ngIf="estaBorrando">
-        <span class="sr-only">Borrando...</span>
-      </div>
-  
-    </main>
-  
-    <footer class="container">
-      <p>&copy; Company 2017-2020</p>
-    </footer>
+    </div>
+
+    <div class="spinner-border text-primary" role="status" *ngIf="estaBorrando">
+      <span class="sr-only">Borrando...</span>
+    </div>
+
+  </main>
+
+  <footer class="container">
+    <p>&copy; Company 2017-2020</p>
+  </footer>
