@@ -27,6 +27,7 @@ import { ModificarActorComponent } from './componentes/modificar-actor/modificar
 import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
 import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 import { MenuComponent } from './componentes/menu/menu.component';
+import { PaisPeliculaComponent } from './componentes/pais-pelicula/pais-pelicula.component';
 
 
 
@@ -49,7 +50,8 @@ import { MenuComponent } from './componentes/menu/menu.component';
     ModificarActorComponent,
     ActorPeliculaComponent,
     DetallePaisComponent,
-    MenuComponent
+    MenuComponent,
+    PaisPeliculaComponent
   ],
   imports: [
     BrowserModule,

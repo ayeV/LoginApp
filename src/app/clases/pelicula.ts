@@ -7,6 +7,7 @@ export class Pelicula {
     public cantPublico:number;
     public fotoPelicula:string;
     public actor:any;
+    
 
     constructor(id,nombre,tipo,fechaDeEstreno,cantPublico,fotoPelicula,actor)
     {

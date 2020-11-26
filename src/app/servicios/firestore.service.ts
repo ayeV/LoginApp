@@ -60,7 +60,7 @@ export class FirestoreService {
       });
   }
 
-  postPelicula(pelicula:Pelicula,actor:Actor) {
+  postPelicula(pelicula:Pelicula,actor:Actor,pais:any) {
     return this.db.collection('peliculas').add({
       cantPublico:pelicula.cantPublico,
       fechaDeEstreno:pelicula.fechaDeEstreno,
@@ -75,7 +75,8 @@ export class FirestoreService {
         foto:actor.foto,
         id:actor.id,
         pais:actor.pais
-      }
+      },
+      pais:pais
     })
       .then(() => {
         console.log("Document successfully written!");

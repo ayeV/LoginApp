@@ -9,16 +9,12 @@ import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.componen
 import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component';
 import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
 import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
+import { PaisPeliculaComponent } from './componentes/pais-pelicula/pais-pelicula.component';
 
 const routes: Routes = [
   {
     path: 'busqueda',
     component: BusquedaComponent
-  },
-  {
-    path: '',
-    redirectTo: '/busqueda',
-    pathMatch: 'full'
   },
   {
     path: 'bienvenido',
@@ -44,7 +40,16 @@ const routes: Routes = [
 {
   path: 'actor/actorpelicula',
   component: ActorPeliculaComponent
-}
+},
+{
+  path: 'actor/paisPelicula',
+  component: PaisPeliculaComponent
+},
+{
+  path: '',
+  redirectTo: '/busqueda',
+  pathMatch: 'full'
+},
  
 ];
 

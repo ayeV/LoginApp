@@ -7,8 +7,8 @@
       <th>Fecha de nac</th>
       <th>Sexo</th>
       <th>Pais</th>
-      <th>Foto</th>
-      <th>Accion</th>
+      <th *ngIf="mostrarAccion" >Foto</th>
+      <th *ngIf="mostrarAccion">Accion</th>
 
 
     </tr>
@@ -21,15 +21,15 @@
       <td>{{entidad.fechaNac}}</td>
       <td>{{entidad.sexo}}</td>
       <td>{{entidad.pais.nombre}}</td>
-      <td> <img [src]="entidad.foto" style="width: 30%;"></td>
+      <td *ngIf="mostrarAccion"> <img [src]="entidad.foto" style="width: 30%;"></td>
 
-      <td><button type="button" class="btn btn-info btn-circle" (click)="borrar(entidad)"><i
+      <td *ngIf="mostrarAccion"><button type="button" class="btn btn-info btn-circle" (click)="borrar(entidad)"><i
             class="fa fa-check"></i>Borrar
         </button></td>
-      <td><button type="button" class="btn btn-info btn-circle" (click)="mostrar(entidad)"><i
+      <td *ngIf="mostrarAccion"><button type="button" class="btn btn-info btn-circle" (click)="mostrar(entidad)"><i
             class="fa fa-check"></i>Detalle
         </button></td>
-      <td><button type="button" class="btn btn-info btn-circle" (click)="modificar(entidad)"><i
+      <td *ngIf="mostrarAccion"><button type="button" class="btn btn-info btn-circle" (click)="modificar(entidad)"><i
             class="fa fa-check"></i>Modificar
         </button></td>
 

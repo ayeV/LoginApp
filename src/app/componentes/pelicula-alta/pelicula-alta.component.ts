@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Pelicula } from 'src/app/clases/pelicula';
+import { HttpServiceService } from 'src/app/servicios/http-service.service';
 import { Actor } from '../../clases/actor';
 import { FirestoreService } from '../../servicios/firestore.service';
 
@@ -17,14 +19,26 @@ export class PeliculaAltaComponent implements OnInit {
   public tipo: string;
   public actorAgregado;
   public estaGuardando = false;
-  constructor(public db: FirestoreService) {
+  public paisAgregado:any;
+  public paises = [];
+
+
+  constructor(public db: FirestoreService,private service : HttpServiceService, private router:Router) {
     this.getData();
+    this.service.getPaises();
+    this.paises = this.service.lista;
   }
 
   ngOnInit(): void {
   }
 
 
+  setearPais(pais)
+  {
+    this.paisAgregado = pais;
+  }
+
+  
   getData() {
     let pics = [];
     this.db.getActores().subscribe(x => {
@@ -43,13 +57,14 @@ export class PeliculaAltaComponent implements OnInit {
   }
 
   guardar() {
-    if (this.nombre != null && this.actorAgregado != null && this.cantPublico != null && this.fechaDeEstreno != null && this.tipo != null) {
+    if (this.nombre != null && this.actorAgregado != null && this.cantPublico != null && this.fechaDeEstreno != null && this.tipo != null && this.paisAgregado != null) {
       this.estaGuardando = true;
       this.db.postPelicula(
         new Pelicula(this.ID(), this.nombre, this.tipo, this.fechaDeEstreno, this.cantPublico, '', this.actorAgregado)
         , new Actor(this.actorAgregado.id, this.actorAgregado.nombre, this.actorAgregado.apellido,
-          this.actorAgregado.fechaNac, this.actorAgregado.foto, this.actorAgregado.sexo, this.actorAgregado.pais)).then(() => {
+          this.actorAgregado.fechaNac, this.actorAgregado.foto, this.actorAgregado.sexo, this.actorAgregado.pais),this.paisAgregado).then(() => {
             this.estaGuardando = false;
+            this.router.navigate(['/busqueda']);
           });
     }
 

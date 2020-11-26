@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TablaactoresComponent implements OnInit {
 
+  @Input() mostrarAccion;
+
   @Input() actores1;
   @Output() actorSeleccionadoMostrar: EventEmitter<any>= new EventEmitter<any>(); 
   @Output() actorSeleccionadoBorrar: EventEmitter<any>= new EventEmitter<any>(); 

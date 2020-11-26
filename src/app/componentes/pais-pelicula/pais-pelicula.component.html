@@ -1,0 +1,53 @@
+<body>
+    <app-menu></app-menu>
+    <main role="main">
+        <div class="jumbotron" *ngIf="paises">
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Foto</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let entidad of paises">
+                            <td>{{entidad.name}}</td>
+                            <td> <img [src]="entidad.flag" style="width: 30%;"></td>
+
+                            <td><button type="button" class="btn btn-info btn-circle" (click)="verPeliculas(entidad.name)"><i
+                                        class="fa fa-check"></i>Ver peliculas
+                                </button></td>
+                            <td><button type="button" class="btn btn-info btn-circle" (click)="verActores(entidad.name)"><i
+                                        class="fa fa-check"></i>Ver actores
+                                </button></td>
+                            <td><button type="button" class="btn btn-info btn-circle" (click)="verPais(entidad)"><i
+                                        class="fa fa-check"></i>Ver detalle
+                                </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" *ngIf="peliculasDelPais.length >0">
+                    <app-tabla-pelicula [peliculas1]="peliculasDelPais" [verDetalle]="false">
+                    </app-tabla-pelicula>
+                </div>
+                <div class="col">
+                    <app-detalle-pais [pais]="pais"></app-detalle-pais>
+                </div>
+                 <div class="col" *ngIf="actoresDelPais.length > 0">
+                    <app-tablaactores [actores1]="actoresDelPais" [mostrarAccion] = "false">
+                    </app-tablaactores>
+                </div> 
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; Company 2017-2020</p>
+    </footer>
